@@ -9,8 +9,8 @@ import (
 
 const (
 	// ChatMessage is the message number of chat message.
-	ChatMessage     int32 = 1
-	ChatMessageName       = "ChatMessage"
+	ChatMessage     uint64 = 1
+	ChatMessageName        = "ChatMessage"
 )
 
 // Message defines the chat message.
@@ -19,12 +19,12 @@ type Message struct {
 }
 
 // RequestCommand returns the request command.
-func (cm Message) RequestCommand() int32 {
+func (cm Message) RequestCommand() uint64 {
 	return ChatMessage
 }
 
 // ResponseCommand returns the response command.
-func (cm Message) ResponseCommand() int32 {
+func (cm Message) ResponseCommand() uint64 {
 	return ChatMessage
 }
 
